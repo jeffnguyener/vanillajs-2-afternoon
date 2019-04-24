@@ -12,23 +12,23 @@ window.addEventListener('mousemove', function (mouseMoveEvent) {
 
 function draw() {
     return setInterval(function () {
-        const container = document.getElementById("wrap");
-        const color = `background:rgb(${getRandomNumber(
+        let container = document.getElementById("wrap");
+        let color = `background:rgb(${getRandomNumber(
             0,
             255
         )},${getRandomNumber(0, 255)}, ${getRandomNumber(0, 255)});`;
-        const ballSize = getRandomNumber(10, 30);
-        const size = `height:${ballSize}px; width:${ballSize}px;`;
-        const left = `left:${getRandomNumber(
+        let ballSize = getRandomNumber(10, 30);
+        let size = `height:${ballSize}px; width:${ballSize}px;`;
+        let left = `left:${getRandomNumber(
             mousePosition.x - ballSize,
             mousePosition.x
         )}px;`;
-        const top = `top:${getRandomNumber(
+        let top = `top:${getRandomNumber(
             mousePosition.y - ballSize,
             mousePosition.y
         )}px; `;
-        const style = `${left}${top}${color}${size}`;
-        const ball = document.createElement("div");
+        let style = `${left}${top}${color}${size}`;
+        let ball = document.createElement("div");
     ball.classList.add("ball");
     ball.style = style;
 
