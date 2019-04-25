@@ -70,8 +70,8 @@ let getRandomNumber = function (min, max) {
 };
 
 window.addEventListener('mousemove', function (mouseMoveEvent) {
-    mousePosition.x = mouseMoveEvent.pageX;
-    mousePosition.y = mouseMoveEvent.pageY;
+    mousePosition.x = event.clientX;
+    mousePosition.y = event.clientY;
 });
 
 function draw() {
