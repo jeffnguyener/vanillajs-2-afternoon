@@ -69,7 +69,7 @@ let getRandomNumber = function (min, max) {
     return Math.round(Math.random() * (max - min + 1)) + min;
 };
 
-window.addEventListener('mousemove', function (mouseMoveEvent) {
+window.addEventListener('mousemove', function (Event) {
     mousePosition.x = event.clientX;
     mousePosition.y = event.clientY;
 });
@@ -96,7 +96,7 @@ function draw() {
     ball.classList.add("ball");
     ball.style = style;
 
-    ball.addEventListener("animationend", function(e) {
+    ball.addEventListener("animationend", function(event) {
       e.target.remove();
     });
 
