@@ -97,16 +97,16 @@ function draw() {
     ball.style = style;
 
     ball.addEventListener("animationend", function(event) {
-      e.target.remove();
+      event.target.remove();
     });
 
     container.appendChild(ball);
   }, 50);
 }
-window.addEventListener('mouseover', function() {
+window.addEventListener('mouseover', function(event) {
     drawId = draw();
   });
-  window.addEventListener('mouseout', function() {
+  window.addEventListener('mouseout', function(drawId) {
     clearInterval(drawId);
   });    
 
